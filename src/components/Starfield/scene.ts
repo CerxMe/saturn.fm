@@ -55,7 +55,8 @@ class StarfieldScene {
   }
 
   setDimensions() {
-    const width = sceneWidth();
+    // const width = sceneWidth();
+    const width = window.innerWidth;
     const height = window.innerHeight;
 
     this.width = width;

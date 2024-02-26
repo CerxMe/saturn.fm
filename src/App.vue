@@ -13,8 +13,7 @@ import Starfield from './components/Starfield/Starfield.vue'
   -webkit-font-smoothing antialiased
   -moz-osx-font-smoothing grayscale
   display flex
-  background  black
-  color white
+  justify-content center
   min-height 100vh
   height 100%
 </style>

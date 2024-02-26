@@ -1,6 +1,6 @@
 <template lang="pug">
- canvas.wrapper(ref="containerRef")
-
+.wrapper
+  canvas(ref="containerRef")
 </template>
 
 <script setup>
@@ -15,35 +15,43 @@ onMounted(() => {
 })
 </script>
 
+<style scoped lang="stylus">
+.wrapper
+  max-height 100vh
+  max-width 100vw
+  overflow hidden
+  box-sizing content-box
+  padding none
+  background-color black
+  background: url("/galaxy.png") no-repeat;
+  background-size: cover;
+canavas
+  top: 0
+  width: 100%
+  height: 100%
+  animation: fadeIn forwards linear 300ms
 
-<style scoped>
-.wrapper {
-  //opacity: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  //z-index: -2;
-}
-.fadeIn {
-  animation-name: fadeIn;
-  animation-duration: 1s;
-  animation-iteration-count: 1;
-  animation-timing-function: ease-in;
-  animation-fill-mode: forwards;
+@keyframes fadeIn
+  from
+    opacity 0
+  to
+    opacity 1
 
-  @media (prefers-reduced-motion) {
-    animation-delay: 5s;
-    animation-duration: 10s;
-  }
+.background
+  //position: absolute
+  //left: -35%;
+  //right: -35%;
+  //top: -35%;
+  //bottom: -35%;
+  //animation-name: spin;
+  //animation-duration: 500s;
+  //animation-iteration-count: infinite;
+  //animation-timing-function: linear;
+  //z-index -1
 
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-
-    to {
-      opacity: 1;
-    }
-  }
-}
+@keyframes spin
+  from
+    transform: rotate(-0deg)
+  to
+    transform: rotate(-360deg)
 </style>
