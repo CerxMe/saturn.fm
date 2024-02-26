@@ -31,11 +31,11 @@ class StarfieldScene {
 
   public domElement;
 
-  constructor() {
+  constructor(canvas) {
     this.setDimensions();
     this.scene = new Scene();
-    this.renderer = new WebGLRenderer({ alpha: true, antialias: false });
-    this.domElement = this.renderer.domElement;
+    this.domElement = canvas
+    this.renderer = new WebGLRenderer({ canvas, alpha: true, antialias: true });
     this.renderer.setPixelRatio(0.75);
     this.renderer.setSize(this.width, this.height);
 
